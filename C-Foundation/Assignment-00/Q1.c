@@ -1,7 +1,7 @@
 //Q1: Write a C program to add two integers and display the result.
 
 #include <stdio.h>
-int main ()
+void main ()
 {
 	int a = 33, b = 99;
 	int c = a + b;
