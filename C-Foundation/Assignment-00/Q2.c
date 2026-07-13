@@ -1,7 +1,7 @@
 //Q2: Write a C program to find the area of a circle
 
 #include <stdio.h>
-int main ()
+void main ()
 {
 	float r = 7.0;
 	float pi = 3.14;
