@@ -433,20 +433,8 @@ public class BankTest {
                      System.out.print("Enter Monthly Service Charge: ");
                      double serviceCharge = sc.nextDouble();
 
-                     account = new CurrentAccount(
-                             accNo1,
-                             holderName,
-                             balance,
-                             "Current",
-                             status,
-                             overdraftLimit,
-                             overdraftUsed,
-                             transactionLimit,
-                             serviceCharge
-                     );
-
+                     account = new CurrentAccount(accNo1,holderName, balance,"Current",status,overdraftLimit,overdraftUsed,transactionLimit, serviceCharge );                                                                                                                                       
                      break;
-
                  // ------------------------------------------
                  // SALARY ACCOUNT
                  // ------------------------------------------
@@ -460,17 +448,7 @@ public class BankTest {
                      sc.nextLine();
                      String employeeName = sc.nextLine();
 
-                     account = new SalaryAccount(
-                             accNo1,
-                             holderName,
-                             balance,
-                             "Salary",
-                             status,
-                             0,
-                             false,
-                             monthlySalary,
-                             employeeName
-                     );
+                     account = new SalaryAccount( accNo1,holderName,balance, "Salary", status, 0, false, monthlySalary, employeeName );
 
                      break;
 
@@ -495,18 +473,7 @@ public class BankTest {
                      System.out.print("Enter Remaining Balance: ");
                      double remainingBalance = sc.nextDouble();
 
-                     account = new LoanAccount(
-                             accNo1,
-                             holderName,
-                             balance,
-                             "Loan",
-                             status,
-                             loanAmount,
-                             amountRepaid,
-                             loanInterestRate,
-                             loanTenure,
-                             remainingBalance
-                     );
+                     account = new LoanAccount( accNo1,  holderName, balance,"Loan",status,loanAmount,amountRepaid,loanInterestRate,loanTenure, remainingBalance );
 
                      break;
 
@@ -539,31 +506,18 @@ public class BankTest {
                 System.out.println();
                 System.out.println("===== TRANSACTION =====");
 
-                Transaction transaction = new Transaction(
-                        1001,
-                        new Date(),
-                        5000,
-                        "Deposit",
-                        savings.balance
-                );
-
+                Transaction transaction = new Transaction( 1001,  new Date(),5000,"Deposit",savings.balance);
+           
                 transaction.displayTransaction();
 
                 break;
-
-
             case 10:
 
                 System.out.println();
                 System.out.println("===== END OF DAY REPORT =====");
 
-                EndOfDayReport report = new EndOfDayReport(
-                        new Date(),
-                        5000,
-                        3000,
-                        2
-                );
-
+                EndOfDayReport report = new EndOfDayReport( new Date(),5000,3000,2);
+               
                 report.generateReport(new Transaction[0]);
                 report.displayReport();
 
