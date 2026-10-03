@@ -15,7 +15,6 @@ The system includes
 
 🛠️ Technologies Used
 
-☕ Java  
 💻 Core Java  
 🧩 Object Oriented Programming  
 
